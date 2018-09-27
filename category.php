@@ -11,12 +11,13 @@
     }
     //Select all stock items belonging to the selected categoryID
     $stock_sql = "SELECT stock.stockID, stock.name, stock.price, stock.thumbnail,
-  category.name AS catname FROM stock JOIN category ON stock.categoryID=category.categoryID WHERE stock.categoryID=".$_GET['categoryID'];
+  category.name AS catname FROM stock JOIN category ON stock.categoryID=category.categoryID 
+  WHERE stock.categoryID=".$_GET['categoryID'];
     if($stock_query = mysqli_query($dbconnect, $stock_sql)){
         $stock_rs= mysqli_fetch_assoc($stock_query);
     }
     if(mysqli_num_rows($stock_query)==0){
-        echo("Sorry, we have no items currently in stock");
+        echo "Sorry, we have no items currently in stock";
     }else{
         ?>
         <h1><?php echo $stock_rs['catname'];?></h1>
