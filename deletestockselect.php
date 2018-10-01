@@ -5,10 +5,6 @@
         header("Location:index.php");
     }
 
-  /*  if(isset($_SESSION['deletestock'])){
-        unset($_SESSION['deletestock']);
-    }*/
-
     if(!isset($_SESSION['deletestock']['categoryID'])){
        $_SESSION['deletestock']['categoryID'] = "";
     }
