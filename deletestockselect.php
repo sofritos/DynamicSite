@@ -19,7 +19,7 @@
 ?>
 <div class="maincontent">
     <p><a href="index.php?page=admin">Back to admin</a></p>
-    <h1>Select the category to display stock items for deletion</h1>
+    <h1>Select a category to display stock items for deletion</h1>
     <form method="post" action="index.php?page=deletestock">
         <select name="categoryID">
             <?php
